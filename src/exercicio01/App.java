@@ -71,6 +71,25 @@ public class App {
          * Fora do if ela não pode ser acessada.
          * Para resolver, declaramos a variável fora do bloco.
          */
+
+        // EXERCÍCIO 11 – valor (primitivo)
+
+        int a = 10;
+        int b = a;
+
+        b = 99;
+
+        System.out.println("a = " + a);
+        System.out.println("b = " + b);
+
+        /*a)
+         * a = 10
+         * b = 99
+         * 
+         * b) Alterar b não mudou a porque tipos primitivos são copiados por valor.
+         * Isso significa que b recebe uma cópia do valor de a.
+         * Depois disso, cada variável é independente.
+         */
     }
 
 }
