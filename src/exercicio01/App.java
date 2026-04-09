@@ -44,5 +44,7 @@ public class App {
         Carro carro8 = new Carro("I", "J", 2004);
 
         System.out.println("Total de carros: " + Carro.totalCarros);
+        Carro.imprimirTotal();
     }
+
 }

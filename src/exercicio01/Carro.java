@@ -61,8 +61,14 @@ public class Carro {
         int anoAtual = java.time.Year.now().getValue();
         return anoAtual - ano;
 
-        // Acessamos com Carro.totalCarros porque é um atributo static,
-        // ou seja, pertence à classe e é compartilhado por todos os objetos.
     }
 
+    public static void imprimirTotal() {
+        System.out.println("Total de carros: " + totalCarros);
+
+        // System.out.println(modelo); // ERRO! Se descomentar acontece non-static variable modelo cannot be referenced from a static context
+        // Um método static não pode acessar atributos de instância (como "modelo")
+        // porque ele pertence à classe e não a um objeto específico.
+        // Para acessar "modelo", seria necessário ter um objeto criado.
+    }
 }
