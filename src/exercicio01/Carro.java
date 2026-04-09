@@ -2,6 +2,9 @@ package exercicio01;
 
 public class Carro {
     static int totalCarros = 0;
+    static final int ANO_PRIMEIRO_CARRO = 1886;
+    // final significa que o valor não pode ser alterado após ser definido.
+    // É uma constante, usada para evitar mudanças acidentais no código.
     private String marca;
     private String modelo;
     private int ano;
@@ -45,7 +48,7 @@ public class Carro {
     }
 
     public void setAno(int ano) {
-        if (ano < 1886 || ano > 2026) {
+        if (ano < ANO_PRIMEIRO_CARRO || ano > 2026) {
             System.out.println("Ano inválido!");
         } else {
             this.ano = ano;
@@ -66,9 +69,5 @@ public class Carro {
     public static void imprimirTotal() {
         System.out.println("Total de carros: " + totalCarros);
 
-        // System.out.println(modelo); // ERRO! Se descomentar acontece non-static variable modelo cannot be referenced from a static context
-        // Um método static não pode acessar atributos de instância (como "modelo")
-        // porque ele pertence à classe e não a um objeto específico.
-        // Para acessar "modelo", seria necessário ter um objeto criado.
     }
 }

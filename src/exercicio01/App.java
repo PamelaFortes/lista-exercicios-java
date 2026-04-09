@@ -45,6 +45,9 @@ public class App {
 
         System.out.println("Total de carros: " + Carro.totalCarros);
         Carro.imprimirTotal();
+
+        // EXERCÍCIO 9 – final
+        // Carro.ANO_PRIMEIRO_CARRO = 1900; // ERRO DE COMPILAÇÃO SE DESCOMENTAR
     }
 
 }
