@@ -24,7 +24,6 @@ public class App {
         System.out.println("Idade carro 1: " + carro1.idadeDoCarro());
         System.out.println("Idade carro 2: " + carro2.idadeDoCarro());
 
-        // ArrayList com construtor
         ArrayList<Carro> listaCarros = new ArrayList<>();
 
         listaCarros.add(new Carro("Toyota", "Corolla", 2022));
@@ -33,15 +32,17 @@ public class App {
 
         for (Carro c : listaCarros) {
             c.exibir();
-
         }
-        Carro c1 = new Carro("Honda", "Civic", 2010);
-        Carro c2 = new Carro();
+        Carro carro3 = new Carro();
+        carro3.exibir();
 
-        c1.exibir();
-        c2.exibir();
+        // EXERCÍCIO 7 – static
+        Carro carro4 = new Carro("A", "B", 2000);
+        Carro carro5 = new Carro("C", "D", 2001);
+        Carro carro6 = new Carro("E", "F", 2002);
+        Carro carro7 = new Carro("G", "H", 2003);
+        Carro carro8 = new Carro("I", "J", 2004);
 
-        // Um construtor cria com dados definidos,
-        // o outro cria com valores padrão.
+        System.out.println("Total de carros: " + Carro.totalCarros);
     }
 }

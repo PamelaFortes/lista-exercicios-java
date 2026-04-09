@@ -1,7 +1,7 @@
 package exercicio01;
 
 public class Carro {
-
+    static int totalCarros = 0;
     private String marca;
     private String modelo;
     private int ano;
@@ -11,13 +11,15 @@ public class Carro {
         this.marca = marca;
         this.modelo = modelo;
         this.setAno(ano); // usa a validação
+        totalCarros++;
     }
 
-    // CONSTRUTOR VAZIO (mantido se você já estava usando)
+    // CONSTRUTOR VAZIO
     public Carro() {
         this.marca = "Desconhecido";
         this.modelo = "Desconhecido";
         this.ano = 0;
+        totalCarros++;
     }
 
     // GETTERS
@@ -58,5 +60,9 @@ public class Carro {
     int idadeDoCarro() {
         int anoAtual = java.time.Year.now().getValue();
         return anoAtual - ano;
+
+        // Acessamos com Carro.totalCarros porque é um atributo static,
+        // ou seja, pertence à classe e é compartilhado por todos os objetos.
     }
+
 }
