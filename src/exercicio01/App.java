@@ -46,8 +46,31 @@ public class App {
         System.out.println("Total de carros: " + Carro.totalCarros);
         Carro.imprimirTotal();
 
-        // EXERCÍCIO 9 – final
-        // Carro.ANO_PRIMEIRO_CARRO = 1900; // ERRO DE COMPILAÇÃO SE DESCOMENTAR
+        /*
+         * public static void main(String[] args) {
+         * if (true) {
+         * int x = 10;
+         * }
+         * System.out.println(x);
+         * }
+         * 
+         * b) corrigido abaixo
+         */
+        int x;
+
+        if (true) {
+            x = 10;
+        }
+
+        System.out.println(x);
+        /*
+         * a) Não compila, porque x foi criada dentro do if e não existe fora dele.
+         * 
+         * c) Escopo é a área do código onde uma variável existe.
+         * A variável x foi criada dentro do bloco "if", então só existe lá dentro.
+         * Fora do if ela não pode ser acessada.
+         * Para resolver, declaramos a variável fora do bloco.
+         */
     }
 
 }
