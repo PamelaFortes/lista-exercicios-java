@@ -82,13 +82,31 @@ public class App {
         System.out.println("a = " + a);
         System.out.println("b = " + b);
 
-        /*a)
+        /*
+         * a)
          * a = 10
          * b = 99
          * 
          * b) Alterar b não mudou a porque tipos primitivos são copiados por valor.
          * Isso significa que b recebe uma cópia do valor de a.
          * Depois disso, cada variável é independente.
+         */
+
+        // EXERCÍCIO 12 – referência (objeto)
+
+        Carro c1 = new Carro("Fiat", "Uno", 2020);
+        Carro c2 = c1;
+
+        c2.setModelo("Palio");
+
+        System.out.println(c1.getModelo());
+        System.out.println(c2.getModelo());
+
+        /*
+         * a) Resultado = Palio Palio
+         * b) Alterar c2 mudou c1 porque ambos apontam para o mesmo objeto. c1 e c2
+         * compartilham a mesma referência na memória.
+         * c) No exercício 11 (int), o valor é copiado (fica na stack), então cada variável é independente. Neste exercício, c1 e c2 guardam referências (endereços) para um objeto que fica na heap. Como ambos apontam para o mesmo objeto na heap, qualquer alteração afeta os dois.
          */
     }
 
