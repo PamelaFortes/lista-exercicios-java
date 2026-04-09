@@ -34,10 +34,14 @@ public class App {
         for (Carro c : listaCarros) {
             c.exibir();
 
-            // Vantagem do construtor:
-            // Permite criar o objeto já com todos os dados definidos,
-            // evitando ter que chamar vários setters depois.
-            // Isso deixa o código mais organizado e seguro.
         }
+        Carro c1 = new Carro("Honda", "Civic", 2010);
+        Carro c2 = new Carro();
+
+        c1.exibir();
+        c2.exibir();
+
+        // Um construtor cria com dados definidos,
+        // o outro cria com valores padrão.
     }
 }

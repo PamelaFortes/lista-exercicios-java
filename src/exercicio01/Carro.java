@@ -14,16 +14,33 @@ public class Carro {
     }
 
     // CONSTRUTOR VAZIO (mantido se você já estava usando)
-    public Carro() {}
+    public Carro() {
+        this.marca = "Desconhecido";
+        this.modelo = "Desconhecido";
+        this.ano = 0;
+    }
 
     // GETTERS
-    public String getMarca() { return marca; }
-    public String getModelo() { return modelo; }
-    public int getAno() { return ano; }
+    public String getMarca() {
+        return marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public int getAno() {
+        return ano;
+    }
 
     // SETTERS
-    public void setMarca(String marca) { this.marca = marca; }
-    public void setModelo(String modelo) { this.modelo = modelo; }
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
 
     public void setAno(int ano) {
         if (ano < 1886 || ano > 2026) {
@@ -35,10 +52,7 @@ public class Carro {
 
     // MÉTODOS
     void exibir() {
-        System.out.println("----------------");
-        System.out.println("Marca: " + marca);
-        System.out.println("Modelo: " + modelo);
-        System.out.println("Ano: " + ano);
+        System.out.println(marca + " | " + modelo + " | " + ano);
     }
 
     int idadeDoCarro() {
